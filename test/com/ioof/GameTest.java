@@ -17,43 +17,13 @@ public class GameTest {
     }
 
     @Test
-    public void placeLessThanMinX() {
-        game.parseCommand("PLACE -1,0,NORTH");
-        Assert.assertEquals("", robot.report());
-    }
-
-    @Test
-    public void placeLessThanMinY() {
-        game.parseCommand("PLACE 0,-1,NORTH");
-        Assert.assertEquals("", robot.report());
-    }
-
-    @Test
-    public void placeGreaterThanMaxX() {
-        game.parseCommand("PLACE 0,5,NORTH");
-        Assert.assertEquals("", robot.report());
-    }
-
-    @Test
-    public void placeGreaterThanMaxY() {
-        game.parseCommand("PLACE 0,5,NORTH");
-        Assert.assertEquals("", robot.report());
-    }
-
-    @Test
-    public void notPlaced() {
-        game.parseCommand("LEFT");
-        Assert.assertEquals("", robot.report());
-    }
-
-    @Test
-    public void invalidOrientation() {
+    public void invalidPlaceCommandOrientation() {
         game.parseCommand("PLACE 0,0,NORT");
         Assert.assertEquals("", robot.report());
     }
 
     @Test
-    public void invalidPlaceCommand() {
+    public void invalidPlaceCommandXYType() {
         game.parseCommand("PLACE A,B,NORTH");
         Assert.assertEquals("", robot.report());
     }
