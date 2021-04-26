@@ -1,8 +1,6 @@
 package com.ioof;
 
 import com.ioof.model.Robot;
-
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
